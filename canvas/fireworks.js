@@ -146,7 +146,7 @@ FireworkDisplay = {
         var text = $('#firetext').val();
         if (pageTracker) pageTracker._trackPageview("/launched/"+escape(text));
 
-        var totalHeightOffset = 0;
+        var totalHeightOffset = 60;
         var totalWidthOffset = new Array();
         var widthCounter = 0;
         totalWidthOffset[widthCounter] = 0;
