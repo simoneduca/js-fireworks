@@ -146,7 +146,7 @@ FireworkDisplay = {
         var text = $('#firetext').val();
         if (pageTracker) pageTracker._trackPageview("/launched/"+escape(text));
 
-        var totalHeightOffset = 10;
+        var totalHeightOffset = 0;
         var totalWidthOffset = new Array();
         var widthCounter = 0;
         totalWidthOffset[widthCounter] = 0;
@@ -169,7 +169,7 @@ FireworkDisplay = {
         this.allBlocks = new Array();
         var windowHeight = $(window).height();
         var offsetTop = totalHeightOffset;
-        offsetTop += (windowHeight-totalHeightOffset)/3;
+        offsetTop += (windowHeight-totalHeightOffset)/4;
         var offsetLeft = 0;
         var heightOffsetCount = 0;
         for (var i=0;i<text.length;i++) {
