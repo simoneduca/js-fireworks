@@ -67,7 +67,7 @@ input[type='text']{
    margin-left:auto;
    margin-right:auto;
    width:450px;
-   background:#569AEE;
+   background: rgba(74, 179, 181, 0.6);
    padding:16px;
    -webkit-border-radius:10px;
    border:#3C75BA;
