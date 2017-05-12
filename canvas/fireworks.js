@@ -169,7 +169,7 @@ FireworkDisplay = {
         this.allBlocks = new Array();
         var windowHeight = $(window).height();
         var offsetTop = totalHeightOffset;
-        offsetTop += (windowHeight-totalHeightOffset)/4;
+        offsetTop += (windowHeight-totalHeightOffset)/3;
         var offsetLeft = 0;
         var heightOffsetCount = 0;
         for (var i=0;i<text.length;i++) {
@@ -278,13 +278,15 @@ Firework = function(index) {
     this.x = FireworkDisplay.canvaswidth/2;
     this.y = 0;
     this.status = FireworkDisplay.FIREWORK_READY;
-    this.brightness = 255;
+    this.brightness = 240;
     this.r = 1;
     this.g = 1;
     this.b = 1;
     this.start = {x:0, y:0};
     this.previous = 0;
 }
+
+
 
 
 // Home-made point-based font.
