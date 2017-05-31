@@ -67,8 +67,8 @@ $(document).ready(function(){
 FireworkDisplay = {
     GRAVITY : 7,
     FRAME_RATE : 30,
-    DEPLOYMENT_RATE : 20,
-    FIREWORK_SPEED : 3,
+    DEPLOYMENT_RATE : 25,
+    FIREWORK_SPEED : 2,
     DISPERSION_WIDTH : 1,
     DISPERSION_HEIGHT : 2,
     FIREWORK_PAYLOAD : 100,
@@ -134,7 +134,7 @@ FireworkDisplay = {
         }
         this.ctx = this.canvas.getContext("2d");
         this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-        this.ctx.lineWidth = "2.5";
+        this.ctx.lineWidth = "1.5";
         this.ctx.strokeStyle = "rgb(255, 255, 255)";
         this.canvaswidth = $(window).width();
         this.canvasheight = $(window).height();
@@ -169,7 +169,7 @@ FireworkDisplay = {
         this.allBlocks = new Array();
         var windowHeight = $(window).height();
         var offsetTop = totalHeightOffset;
-        offsetTop += (windowHeight-totalHeightOffset)/3;
+        offsetTop += (windowHeight-totalHeightOffset)/4;
         var offsetLeft = 0;
         var heightOffsetCount = 0;
         for (var i=0;i<text.length;i++) {
@@ -247,7 +247,7 @@ FireworkDisplay = {
             fw.colour = "rgb("+Math.round(fw.r*fw.brightness)+", "+Math.round(fw.g*fw.brightness)+", "+Math.round(fw.b*fw.brightness)+")";
             this.ctx.strokeStyle = fw.colour;
             fw.brightness-=5;
-            if (fw.brightness<0) this.destroyFirework(fw);
+            if (fw.brightness<100) this.destroyFirework(fw);
         }
         if (fw.dy<-1 && fw.status==this.FIREWORK_LAUNCHED) {
             this.explodeFirework(fw);
